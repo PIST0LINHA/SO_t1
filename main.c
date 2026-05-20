@@ -1,25 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
 #include "app.h"
+#include "kernel_sim.h"
+#include "intercontroller_sim.h"
 
 #define N_PROCESSOS 6
+#define MAX_ITER 20
 
 int main(void)
 {
-  pid_t processos[N_PROCESSOS] = {0}; 
+  PCB processos[N_PROCESSOS] = {0};
+  pid_t kernel_pid;
 
   for(int i = 0; i < N_PROCESSOS; ++i)
   {
-    processos[i] = fork();
-    if(processos[i] == 0)
+    pipe(processos[i].pipefd);
+    pid_t pid = fork();
+    if(pid == 0) 
     {
-      processos_aplicacoes(i + 1);
+      close(processos[i].pipefd[0]);
+      raise(SIGSTOP);
+      app_loop(i + 1, processos[i].pipefd[1], MAX_ITER);
       exit(0);
     }
+    if(pid > 0) processos[i].pid = pid;
+  };
+
+  kernel_pid = fork();
+  if(kernel_pid == 0)
+  {
+    kernel_init(processos, N_PROCESSOS);
+    kernel_loop();
+    exit(0);
   }
 
-  while(1) sleep(10);
+  pid_t interrupt_id = fork();
+  if(interrupt_id == 0)
+  {
+    interrupt_controller(kernel_pid);
+    exit(0);
+  }
 
+  for(int i = 0; i < N_PROCESSOS; ++i) wait(NULL);
+  waitpid(kernel_pid, NULL, 0);
+  waitpid(interrupt_id, NULL, 0);
   return 0;
 }
