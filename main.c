@@ -7,7 +7,7 @@
 #include "intercontroller_sim.h"
 
 #define N_PROCESSOS 6
-#define MAX_ITER 20
+#define MAX_ITER 13
 
 int main(void)
 {
@@ -31,7 +31,7 @@ int main(void)
   kernel_pid = fork();
   if(kernel_pid == 0)
   {
-    kernel_init(processos, N_PROCESSOS);
+    kernel_init(processos);
     kernel_loop();
     exit(0);
   }

@@ -18,7 +18,7 @@ typedef struct {
     int pipefd[2];  
 }PCB;
 
-void kernel_init(PCB *procs, int num_procs);
+void kernel_init(PCB *procs);
 void kernel_loop();
 
 #endif

@@ -40,13 +40,13 @@ void scheduler()
   atual = prox;
 }
 
-void irq0_handler(int sig)
+void irq0_handler()
 {
   //printf("[KERNEL]IRQ0\n");
   scheduler();
 }
 
-void irq1_handler(int sig)
+void irq1_handler()
 {
   //printf("[KERNEL]IRQ1\n");
   for(int i = 0; i < PROCESSOS; ++i)
@@ -60,7 +60,7 @@ void irq1_handler(int sig)
   }
 }
 
-void kernel_init(PCB *processos1, int num) // processos1 para nao dar problema com processos
+void kernel_init(PCB *processos1) // processos1 para nao dar problema com processos
 {
   processos = processos1;
 }
@@ -73,7 +73,7 @@ void kernel_loop()
   processos[0].state = RUNNING;
   kill(processos[0].pid, SIGCONT);
   
-  char buffer[10];
+  char buffer[16];
 
   while(1)
   {
