@@ -4,7 +4,6 @@
 #include <sys/wait.h>
 #include <string.h>
 
-// para 6 processos
 #define PROCESSOS 6
 
 // estados do processo

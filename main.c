@@ -20,11 +20,20 @@ int main(void)
     pid_t pid = fork();
     if(pid == 0) 
     {
-      close(processos[i].pipefd[0]);
-      raise(SIGSTOP);
-      app_loop(i + 1, processos[i].pipefd[1], MAX_ITER);
-      exit(0);
-    }
+	  if(i == 2 || i == 5)
+	  {
+        close(processos[i].pipefd[0]);
+        raise(SIGSTOP);
+        app_loop(i + 1, processos[i].pipefd[1], MAX_ITER, 1);
+        exit(0);
+	  } else 
+	  {
+	    close(processos[i].pipefd[0]);
+        raise(SIGSTOP);
+	    app_loop(i + 1, processos[i].pipefd[1], MAX_ITER, 0);
+	    exit(0);
+	  }
+	 }
     if(pid > 0) processos[i].pid = pid;
   };
 

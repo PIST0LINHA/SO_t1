@@ -1,0 +1,92 @@
+[A1] PID = 16231 PC = 0
+[A1] PID = 16231 PC = 1
+[A1] PID = 16231 PC = 2
+[A1] PID = 16231 PC = 3
+[A1] PID = 16231 PC = 4
+[A1] PID = 16231 PC = 5
+[A1] PID = 16231 PC = 6
+[A1] PID = 16231 PC = 7
+[A1] PID = 16231 PC = 8
+[A1] PID = 16231 PC = 9
+[A1] PID = 16231 PC = 10
+[A1] PID = 16231 PC = 11
+[A1] PID = 16231 PC = 12
+[A1] finalizado
+[A2] PID = 16232 PC = 0
+[A2] PID = 16232 PC = 1
+[A2] PID = 16232 PC = 2
+[A2] PID = 16232 PC = 3
+[A2] PID = 16232 PC = 4
+[A2] PID = 16232 PC = 5
+[A2] PID = 16232 PC = 6
+[A2] PID = 16232 PC = 7
+[A2] PID = 16232 PC = 8
+[A2] PID = 16232 PC = 9
+[A2] PID = 16232 PC = 10
+[A2] PID = 16232 PC = 11
+[A2] PID = 16232 PC = 12
+[A2] finalizado
+[A4] PID = 16234 PC = 0
+[A4] PID = 16234 PC = 1
+[A4] PID = 16234 PC = 2
+[A4] PID = 16234 PC = 3
+[A4] PID = 16234 PC = 4
+[A4] PID = 16234 PC = 5
+[A4] PID = 16234 PC = 6
+[A4] PID = 16234 PC = 7
+[A4] PID = 16234 PC = 8
+[A4] PID = 16234 PC = 9
+[A4] PID = 16234 PC = 10
+[A4] PID = 16234 PC = 11
+[A4] PID = 16234 PC = 12
+[A4] finalizado
+[A5] PID = 16235 PC = 0
+[A5] PID = 16235 PC = 1
+[A5] PID = 16235 PC = 2
+[A5] PID = 16235 PC = 3
+[A5] PID = 16235 PC = 4
+[A5] PID = 16235 PC = 5
+[A5] PID = 16235 PC = 6
+[A5] PID = 16235 PC = 7
+[A5] PID = 16235 PC = 8
+[A5] PID = 16235 PC = 9
+[A5] PID = 16235 PC = 10
+[A5] PID = 16235 PC = 11
+[A5] PID = 16235 PC = 12
+[A5] finalizado
+[A3] PID = 16233 PC = 0
+[A3] PID = 16233 PC = 1
+[A3] PID = 16233 PC = 2
+[A3] PID = 16233 PC = 3
+[A3] PID = 16233 PC = 4
+[A3] PID = 16233 PC = 5
+[A3] Solicitando I/O
+[A3] Voltou do I/O
+[A3] PID = 16233 PC = 6
+[A3] PID = 16233 PC = 7
+[A3] PID = 16233 PC = 8
+[A3] PID = 16233 PC = 9
+[A3] PID = 16233 PC = 10
+[A3] PID = 16233 PC = 11
+[A3] PID = 16233 PC = 12
+[A3] Solicitando I/O
+[A3] Voltou do I/O
+[A3] finalizado
+[A6] PID = 16236 PC = 0
+[A6] PID = 16236 PC = 1
+[A6] PID = 16236 PC = 2
+[A6] PID = 16236 PC = 3
+[A6] PID = 16236 PC = 4
+[A6] PID = 16236 PC = 5
+[A6] Solicitando I/O
+[A6] Voltou do I/O
+[A6] PID = 16236 PC = 6
+[A6] PID = 16236 PC = 7
+[A6] PID = 16236 PC = 8
+[A6] PID = 16236 PC = 9
+[A6] PID = 16236 PC = 10
+[A6] PID = 16236 PC = 11
+[A6] PID = 16236 PC = 12
+[A6] Solicitando I/O
+[A6] Voltou do I/O
+[A6] finalizado

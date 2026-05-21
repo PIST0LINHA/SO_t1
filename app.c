@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <signal.h>
 
-void app_loop(int id, int write_fd, int max_iter)
+void app_loop(int id, int write_fd, int max_iter, int aceita_IO)
 {
   int pc = 0;
   while(pc < max_iter)
@@ -12,7 +12,7 @@ void app_loop(int id, int write_fd, int max_iter)
     sleep(1);
 
     // simula I/O
-    if(pc == 5)
+    if(pc == 5 && aceita_IO == 1)
     {
       printf("[A%d] Solicitando I/O\n", id);
       write(write_fd, "IO", 2);
@@ -20,7 +20,7 @@ void app_loop(int id, int write_fd, int max_iter)
       printf("[A%d] Voltou do I/O\n", id);
     };
 
-    if(pc == 12)
+    if(pc == 12 && aceita_IO == 1)
     {
       printf("[A%d] Solicitando I/O\n", id);
       write(write_fd, "IO", 2);
